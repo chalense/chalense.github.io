@@ -1,0 +1,572 @@
+/* Estilos Generales y Fondo Crema/Beige */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 30px; /* espacio para el borde floral */
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+
+            /* Fondo crema elegante */
+            background-color: #f5edd8;
+            background-image: 
+                radial-gradient(circle at 20% 20%, #fdf6e8 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, #eddfc0 0%, transparent 50%);
+            background-attachment: fixed;
+
+            color: #4a3520;
+        }
+
+        /* Borde floral fijo arriba del contenido */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+
+            background:
+                url('img/flor-esquina.png') top left no-repeat,
+                url('img/flor-esquina.png') top right no-repeat,
+                url('img/flor-esquina.png') bottom left no-repeat,
+                url('img/flor-esquina.png') bottom right no-repeat;
+
+            background-size: 180px;
+        }
+
+        /* Marco dorado superior */
+        /* Marco superior con efecto de ocultar contenido */
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+
+            /* crea una zona que tapa el contenido cerca del borde */
+            box-shadow:
+                inset 0 0 0 35px #f5edd8,
+                inset 0 0 40px rgba(184,136,42,0.20);
+
+            border: 2px solid rgba(184, 136, 42, 0.45);
+            border-radius: 28px;
+            margin: 18px;
+        }
+
+        /*===========================================
+        /* Hace que el contenido desaparezca debajo del marco */
+        .container, header,footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* zona de ocultamiento arriba y abajo */
+        body::selection {
+            background: transparent;
+        }
+
+        .fade-mask-top, .fade-mask-bottom {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            pointer-events: none;
+            z-index: 9997;
+        }
+
+        .fade-mask-top {
+            top: 0;
+            background: linear-gradient(
+                to bottom,
+                #f5edd8 0%,
+                rgba(245,237,216,0.95) 40%,
+                rgba(245,237,216,0) 100%
+            );
+        }
+
+        .fade-mask-bottom {
+            bottom: 0;
+            background: linear-gradient(
+                to top,
+                #f5edd8 0%,
+                rgba(245,237,216,0.95) 40%,
+                rgba(245,237,216,0) 100%
+            );
+        }
+
+        
+        /*===========================================
+
+        /* Títulos principales en Dorado Metálico oscuro */
+        h1, h2, h3 {
+            color: #b8882a;
+            font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(184,136,42,0.15);
+        }
+
+        /* Tipografía en Carta (Cursiva) para el Nombre */
+        .letra-carta {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5.5rem; /* Tamaño grande y vistoso */
+            color: #e4c383;
+            margin: 10px 0;
+            display: block;
+            text-shadow: 1px 2px 6px rgba(184,136,42,0.25);
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+
+        /* Imagen de fondo difuminada */
+        header::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.20),
+                    rgba(0,0,0,0.35)
+                ),
+                url('img/image1.png') center/cover no-repeat;
+
+            filter: blur(5px) brightness(0.75);
+            transform: scale(1.08); /* evita bordes vacíos al difuminar */
+            z-index: 0;
+        }
+
+        /* El texto queda encima */
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #e6bf72;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        /* Contenedor de las secciones */
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Cuenta Regresiva Estilo Dorado sobre Crema */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background-color: rgba(184, 136, 42, 0.08);
+            border: 1px solid #c9a44e;
+            color: #a07020;
+
+            /* Más compacto */
+            padding: 8px 10px;
+            border-radius: 8px;
+            min-width: 55px;
+
+            box-shadow: 0 3px 10px rgba(184,136,42,0.12);
+        }
+
+        /* Número del contador más pequeño */
+        .time-box span {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        /* Texto "Días, Horas..." */
+        .time-box small {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tarjetas de Información en Crema con borde Dorado */
+        .card {
+            background: rgba(255, 252, 242, 0.92);
+            border: 1px solid rgba(184, 136, 42, 0.35);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(160,110,30,0.12), 0 2px 8px rgba(160,110,30,0.08);
+            margin-bottom: 40px;
+            backdrop-filter: blur(5px);
+        }
+
+        .card h2 {
+            font-size: 2.3rem;
+            margin-top: 0;
+            border-bottom: 1px solid rgba(184, 136, 42, 0.25);
+            padding-bottom: 15px;
+        }
+
+        /* Botones Dorados */
+        .btn {
+            display: inline-block;
+            background-color: #b8882a;
+            color: #fff8ec;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+            border: 1px solid #b8882a;
+            box-shadow: 0 4px 14px rgba(184,136,42,0.25);
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: #b8882a;
+            box-shadow: 0 4px 18px rgba(184,136,42,0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(180deg, #eddfc0 0%, #e4d0a8 100%);
+            border-top: 1px solid rgba(184, 136, 42, 0.3);
+            color: #b8882a;
+            padding: 40px 20px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* ===========================
+            ANIMACIONES DEL HEADER
+        =========================== */
+
+        /* Estado inicial */
+        header p,
+        header h1,
+        .letra-carta {
+            opacity: 0;
+        }
+
+        /* Primer texto */
+        header p:nth-of-type(1) {
+            animation: fadeUp 1.2s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        /* 15 años */
+        header h1 {
+            animation: zoomFade 1.4s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        /* "de" */
+        header p:nth-of-type(2) {
+            animation: fadeUp 1.2s ease forwards;
+            animation-delay: 1.3s;
+        }
+
+        /* Nombre de la quinceañera */
+        .letra-carta {
+            animation: elegantReveal 1.8s ease forwards;
+            animation-delay: 1.7s;
+        }
+
+        /* ===========================
+        KEYFRAMES
+        =========================== */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+                filter: blur(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes zoomFade {
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+                filter: blur(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes elegantReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(70px) scale(0.95);
+                filter: blur(12px);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translateY(-8px) scale(1.02);
+                filter: blur(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+/* ==========================
+   CALENDARIO
+========================== */
+
+.calendar-card {
+    margin: 40px auto;
+    max-width: 320px;
+}
+
+.calendar {
+    background: rgba(255, 252, 242, 0.92);
+    border: 1px solid rgba(184, 136, 42, 0.35);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(160,110,30,0.12);
+    backdrop-filter: blur(5px);
+}
+
+.calendar-header {
+    font-size: 1.4rem;
+    color: #b8882a;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.calendar-days,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-days span {
+    font-size: 0.75rem;
+    color: #b8882a;
+    font-weight: 600;
+}
+
+.calendar-grid span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 0.95rem;
+}
+
+/* Día seleccionado */
+.selected-day {
+    background: linear-gradient(
+        135deg,
+        #d4a53d,
+        #b8882a
+    );
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(184,136,42,0.35);
+    transform: scale(1.12);
+    position: relative;
+}
+
+/* pequeño brillo elegante */
+.selected-day::after {
+    content: "✨";
+    position: absolute;
+    top: -10px;
+    right: -6px;
+    font-size: 0.8rem;
+}
+/* ==========================
+   SECCIÓN DE PADRES
+========================== */
+
+.parents-section {
+    margin: 40px auto 10px;
+    max-width: 520px;
+    padding: 38px 28px;
+    background: rgba(255, 252, 242, 0.88);
+    border: 1px solid rgba(184, 136, 42, 0.30);
+    border-radius: 18px;
+    box-shadow: 0 6px 28px rgba(160,110,30,0.10);
+    backdrop-filter: blur(4px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Roseta dorada de fondo decorativa */
+.parents-section::before {
+    content: "✿";
+    position: absolute;
+    font-size: 160px;
+    color: rgba(184,136,42,0.04);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    line-height: 1;
+}
+
+.parents-ornament {
+    color: #c9a44e;
+    font-size: 1.1rem;
+    letter-spacing: 6px;
+    margin: 0 0 14px;
+    opacity: 0.75;
+}
+
+.parents-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a6530;
+    margin: 0 0 18px;
+    opacity: 0.85;
+}
+
+.parents-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c9a44e, transparent);
+    margin: 0 auto 22px;
+}
+
+.parents-names {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.parent-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.6rem;
+    color: #b8882a;
+    text-shadow: 1px 2px 8px rgba(184,136,42,0.18);
+    line-height: 1.1;
+}
+
+.parents-heart {
+    font-size: 1.3rem;
+    color: #c9a44e;
+    opacity: 0.70;
+    margin-top: 4px;
+}
+
+.parents-invite {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    color: #7a5a28;
+    margin: 0 0 16px;
+    font-style: italic;
+    opacity: 0.80;
+}
+
+/* ==========================
+   BORDE FLORAL SVG (overlay)
+   Reemplaza el body::before con imagen
+========================== */
+
+/* Quitamos el borde anterior basado en imagen */
+body::before {
+    background: none !important;
+}
+
+.floral-border-svg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================
+   BOTÓN DE MÚSICA FLOTANTE
+========================== */
+
+#musicBtn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 10000;
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #d4af37, #b8882a);
+    color: #fff8ec;
+    border: 2px solid rgba(255,248,236,0.4);
+    box-shadow:
+        0 4px 18px rgba(184,136,42,0.45),
+        0 0 0 4px rgba(184,136,42,0.12);
+
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#musicBtn:hover {
+    transform: scale(1.10);
+    box-shadow:
+        0 6px 24px rgba(184,136,42,0.55),
+        0 0 0 6px rgba(184,136,42,0.15);
+}
+
+/* Animación giratoria cuando está reproduciendo */
+#musicBtn.playing {
+    animation: spinGlow 3s linear infinite;
+}
+
+@keyframes spinGlow {
+    0%   { box-shadow: 0 4px 18px rgba(184,136,42,0.45), 0 0 0 4px rgba(184,136,42,0.12); }
+    50%  { box-shadow: 0 4px 28px rgba(212,175,55,0.70), 0 0 0 8px rgba(212,175,55,0.18); }
+    100% { box-shadow: 0 4px 18px rgba(184,136,42,0.45), 0 0 0 4px rgba(184,136,42,0.12); }
+}
