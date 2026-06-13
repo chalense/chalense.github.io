@@ -9,6 +9,315 @@
     
 </head>
 <body>
+
+<!-- ══════════════════════════════
+     MARCO FLORAL SVG (overlay fijo)
+     Flores y hojas dibujadas con SVG puro.
+════════════════════════════════ -->
+<svg class="floral-border-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pétalo base -->
+    <ellipse id="pt" rx="8" ry="18" fill="#d4af37"/>
+    <!-- Flor grande (5 pétalos) -->
+    <g id="FG">
+      <use href="#pt" fill="#d4b83a" opacity="0.88"/>
+      <use href="#pt" transform="rotate(72)"  fill="#c8922e" opacity="0.82"/>
+      <use href="#pt" transform="rotate(144)" fill="#d4b83a" opacity="0.86"/>
+      <use href="#pt" transform="rotate(216)" fill="#c8922e" opacity="0.82"/>
+      <use href="#pt" transform="rotate(288)" fill="#d4b83a" opacity="0.86"/>
+      <circle r="7.5" fill="#f5e070"/>
+      <circle r="3.5" fill="#fff3a0" opacity="0.7"/>
+    </g>
+    <!-- Flor mediana -->
+    <g id="FM">
+      <ellipse rx="5.5" ry="12" fill="#d4b83a" opacity="0.85"/>
+      <ellipse rx="5.5" ry="12" transform="rotate(72)"  fill="#c8922e" opacity="0.80"/>
+      <ellipse rx="5.5" ry="12" transform="rotate(144)" fill="#d4b83a" opacity="0.83"/>
+      <ellipse rx="5.5" ry="12" transform="rotate(216)" fill="#c8922e" opacity="0.80"/>
+      <ellipse rx="5.5" ry="12" transform="rotate(288)" fill="#d4b83a" opacity="0.83"/>
+      <circle r="5.5" fill="#f5e070"/>
+      <circle r="2.5" fill="#fff3a0" opacity="0.7"/>
+    </g>
+    <!-- Flor pequeña -->
+    <g id="FS">
+      <ellipse rx="3.5" ry="8" fill="#d4b83a" opacity="0.80"/>
+      <ellipse rx="3.5" ry="8" transform="rotate(72)"  fill="#e8c450" opacity="0.75"/>
+      <ellipse rx="3.5" ry="8" transform="rotate(144)" fill="#d4b83a" opacity="0.78"/>
+      <ellipse rx="3.5" ry="8" transform="rotate(216)" fill="#e8c450" opacity="0.75"/>
+      <ellipse rx="3.5" ry="8" transform="rotate(288)" fill="#d4b83a" opacity="0.78"/>
+      <circle r="3.5" fill="#f5e070"/>
+    </g>
+    <!-- Hoja lanceolada -->
+    <g id="HJ">
+      <ellipse rx="4.5" ry="11" fill="#5a9040" opacity="0.65"/>
+      <ellipse rx="1.5" ry="10" fill="#3d6e28" opacity="0.30"/>
+    </g>
+    <!-- Capullo -->
+    <g id="CP">
+      <ellipse rx="4" ry="9" fill="#d4b83a" opacity="0.70"/>
+      <ellipse rx="2" ry="5" fill="#f0d060" opacity="0.60" transform="translateY(-2)"/>
+    </g>
+  </defs>
+
+  <!-- ═══════════════════
+       ESQUINA SUP. IZQUIERDA
+  ═══════════════════ -->
+  <!-- Ramas -->
+  <path d="M24,24 Q70,16 130,26"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M24,24 Q16,70 26,130"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M60,21  Q62,46 48,62"  stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M95,25  Q94,50 78,64"  stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M22,62  Q46,60 60,48"  stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M23,95  Q48,93 62,78"  stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M38,22  Q36,36 26,44"  stroke="#6aaa44" stroke-width="1.2" fill="none" opacity="0.45"/>
+  <!-- Hojas -->
+  <use href="#HJ" transform="translate(60,21)  rotate(-28)"/>
+  <use href="#HJ" transform="translate(75,23)  rotate(14)"/>
+  <use href="#HJ" transform="translate(103,27) rotate(-8)"/>
+  <use href="#HJ" transform="translate(22,62)  rotate(-82)"/>
+  <use href="#HJ" transform="translate(23,78)  rotate(-78)"/>
+  <use href="#HJ" transform="translate(24,98)  rotate(-88)"/>
+  <use href="#HJ" transform="translate(50,60)  rotate(22)"/>
+  <use href="#HJ" transform="translate(60,76)  rotate(32)"/>
+  <use href="#HJ" transform="translate(38,40)  rotate(-60)"/>
+  <!-- Capullos -->
+  <use href="#CP" transform="translate(85,26)  rotate(15)"/>
+  <use href="#CP" transform="translate(25,86)  rotate(-75)"/>
+  <use href="#CP" transform="translate(55,50)  rotate(40)"/>
+  <!-- Flores -->
+  <use href="#FG" transform="translate(24,24)  rotate(18)"/>
+  <use href="#FM" transform="translate(52,50)  rotate(-22)"/>
+  <use href="#FM" transform="translate(90,26)  rotate(10)"/>
+  <use href="#FS" transform="translate(68,38)  rotate(42)"/>
+  <use href="#FS" transform="translate(42,68)  rotate(-30)"/>
+  <use href="#FM" transform="translate(28,90)  rotate(5)"/>
+  <use href="#FS" transform="translate(58,76)  rotate(52)"/>
+  <use href="#FS" transform="translate(116,28) rotate(-18)"/>
+  <use href="#FS" transform="translate(36,44)  rotate(-50)"/>
+
+  <!-- ═══════════════════
+       ESQUINA SUP. DERECHA
+  ═══════════════════ -->
+  <path d="M976,24 Q930,16 870,26"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M976,24 Q984,70 974,130" stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M940,21  Q938,46 952,62" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M905,25  Q906,50 922,64" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M978,62  Q954,60 940,48" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M977,95  Q952,93 938,78" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M962,22  Q964,36 974,44" stroke="#6aaa44" stroke-width="1.2" fill="none" opacity="0.45"/>
+  <use href="#HJ" transform="translate(940,21) rotate(28)"/>
+  <use href="#HJ" transform="translate(925,23) rotate(-14)"/>
+  <use href="#HJ" transform="translate(897,27) rotate(8)"/>
+  <use href="#HJ" transform="translate(978,62) rotate(82)"/>
+  <use href="#HJ" transform="translate(977,78) rotate(78)"/>
+  <use href="#HJ" transform="translate(976,98) rotate(88)"/>
+  <use href="#HJ" transform="translate(950,60) rotate(-22)"/>
+  <use href="#HJ" transform="translate(940,76) rotate(-32)"/>
+  <use href="#HJ" transform="translate(962,40) rotate(60)"/>
+  <use href="#CP" transform="translate(915,26) rotate(-15)"/>
+  <use href="#CP" transform="translate(975,86) rotate(75)"/>
+  <use href="#CP" transform="translate(945,50) rotate(-40)"/>
+  <use href="#FG" transform="translate(976,24) rotate(-18)"/>
+  <use href="#FM" transform="translate(948,50) rotate(22)"/>
+  <use href="#FM" transform="translate(910,26) rotate(-10)"/>
+  <use href="#FS" transform="translate(932,38) rotate(-42)"/>
+  <use href="#FS" transform="translate(958,68) rotate(30)"/>
+  <use href="#FM" transform="translate(972,90) rotate(-5)"/>
+  <use href="#FS" transform="translate(942,76) rotate(-52)"/>
+  <use href="#FS" transform="translate(884,28) rotate(18)"/>
+  <use href="#FS" transform="translate(964,44) rotate(50)"/>
+
+  <!-- ═══════════════════
+       ESQUINA INF. IZQUIERDA
+  ═══════════════════ -->
+  <path d="M24,976 Q70,984 130,974"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M24,976 Q16,930 26,870"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M60,979  Q62,954 48,938" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M95,975  Q94,950 78,936" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M22,938  Q46,940 60,952" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M23,905  Q48,907 62,922" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M38,978  Q36,964 26,956" stroke="#6aaa44" stroke-width="1.2" fill="none" opacity="0.45"/>
+  <use href="#HJ" transform="translate(60,979)  rotate(28)"/>
+  <use href="#HJ" transform="translate(75,977)  rotate(-14)"/>
+  <use href="#HJ" transform="translate(103,973) rotate(8)"/>
+  <use href="#HJ" transform="translate(22,938)  rotate(82)"/>
+  <use href="#HJ" transform="translate(23,922)  rotate(78)"/>
+  <use href="#HJ" transform="translate(24,902)  rotate(88)"/>
+  <use href="#HJ" transform="translate(50,940)  rotate(-22)"/>
+  <use href="#HJ" transform="translate(60,924)  rotate(-32)"/>
+  <use href="#HJ" transform="translate(38,960)  rotate(60)"/>
+  <use href="#CP" transform="translate(85,974)  rotate(-15)"/>
+  <use href="#CP" transform="translate(25,914)  rotate(75)"/>
+  <use href="#CP" transform="translate(55,950)  rotate(-40)"/>
+  <use href="#FG" transform="translate(24,976)  rotate(-18)"/>
+  <use href="#FM" transform="translate(52,950)  rotate(22)"/>
+  <use href="#FM" transform="translate(90,974)  rotate(-10)"/>
+  <use href="#FS" transform="translate(68,962)  rotate(-42)"/>
+  <use href="#FS" transform="translate(42,932)  rotate(30)"/>
+  <use href="#FM" transform="translate(28,910)  rotate(-5)"/>
+  <use href="#FS" transform="translate(58,924)  rotate(-52)"/>
+  <use href="#FS" transform="translate(116,972) rotate(18)"/>
+  <use href="#FS" transform="translate(36,956)  rotate(50)"/>
+
+  <!-- ═══════════════════
+       ESQUINA INF. DERECHA
+  ═══════════════════ -->
+  <path d="M976,976 Q930,984 870,974"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M976,976 Q984,930 974,870"  stroke="#6aaa44" stroke-width="2.4" fill="none" opacity="0.72"/>
+  <path d="M940,979  Q938,954 952,938" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M905,975  Q906,950 922,936" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M978,938  Q954,940 940,952" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M977,905  Q952,907 938,922" stroke="#6aaa44" stroke-width="1.5" fill="none" opacity="0.55"/>
+  <path d="M962,978  Q964,964 974,956" stroke="#6aaa44" stroke-width="1.2" fill="none" opacity="0.45"/>
+  <use href="#HJ" transform="translate(940,979) rotate(-28)"/>
+  <use href="#HJ" transform="translate(925,977) rotate(14)"/>
+  <use href="#HJ" transform="translate(897,973) rotate(-8)"/>
+  <use href="#HJ" transform="translate(978,938) rotate(-82)"/>
+  <use href="#HJ" transform="translate(977,922) rotate(-78)"/>
+  <use href="#HJ" transform="translate(976,902) rotate(-88)"/>
+  <use href="#HJ" transform="translate(950,940) rotate(22)"/>
+  <use href="#HJ" transform="translate(940,924) rotate(32)"/>
+  <use href="#HJ" transform="translate(962,960) rotate(-60)"/>
+  <use href="#CP" transform="translate(915,974) rotate(15)"/>
+  <use href="#CP" transform="translate(975,914) rotate(-75)"/>
+  <use href="#CP" transform="translate(945,950) rotate(40)"/>
+  <use href="#FG" transform="translate(976,976) rotate(18)"/>
+  <use href="#FM" transform="translate(948,950) rotate(-22)"/>
+  <use href="#FM" transform="translate(910,974) rotate(10)"/>
+  <use href="#FS" transform="translate(932,962) rotate(42)"/>
+  <use href="#FS" transform="translate(958,932) rotate(-30)"/>
+  <use href="#FM" transform="translate(972,910) rotate(5)"/>
+  <use href="#FS" transform="translate(942,924) rotate(52)"/>
+  <use href="#FS" transform="translate(884,972) rotate(-18)"/>
+  <use href="#FS" transform="translate(964,956) rotate(-50)"/>
+
+  <!-- ═══════════════════
+       BORDE SUPERIOR
+  ═══════════════════ -->
+  <path d="M140,16 Q250,8 400,14 Q500,18 600,10 Q750,2 860,16"
+        stroke="#6aaa44" stroke-width="1.8" fill="none" opacity="0.60"/>
+  <!-- flores y hojas cada ~55px -->
+  <use href="#FS" transform="translate(165,13)  rotate(8)"/>
+  <use href="#HJ" transform="translate(188,15)  rotate(-18)"/>
+  <use href="#CP" transform="translate(218,12)  rotate(6)"/>
+  <use href="#HJ" transform="translate(248,13)  rotate(14)"/>
+  <use href="#FM" transform="translate(278,13)  rotate(-5)"/>
+  <use href="#HJ" transform="translate(308,11)  rotate(-20)"/>
+  <use href="#FS" transform="translate(338,10)  rotate(25)"/>
+  <use href="#HJ" transform="translate(368,12)  rotate(10)"/>
+  <use href="#FM" transform="translate(398,13)  rotate(-10)"/>
+  <use href="#HJ" transform="translate(428,11)  rotate(-15)"/>
+  <use href="#FS" transform="translate(458,10)  rotate(5)"/>
+  <use href="#HJ" transform="translate(488,12)  rotate(20)"/>
+  <use href="#FM" transform="translate(518,13)  rotate(-8)"/>
+  <use href="#HJ" transform="translate(548,11)  rotate(-22)"/>
+  <use href="#FS" transform="translate(578,12)  rotate(12)"/>
+  <use href="#HJ" transform="translate(608,13)  rotate(8)"/>
+  <use href="#FM" transform="translate(638,11)  rotate(-6)"/>
+  <use href="#HJ" transform="translate(668,13)  rotate(18)"/>
+  <use href="#FS" transform="translate(698,14)  rotate(-10)"/>
+  <use href="#HJ" transform="translate(728,12)  rotate(-16)"/>
+  <use href="#CP" transform="translate(758,13)  rotate(8)"/>
+  <use href="#HJ" transform="translate(788,15)  rotate(12)"/>
+  <use href="#FS" transform="translate(818,14)  rotate(-5)"/>
+  <use href="#HJ" transform="translate(845,15)  rotate(20)"/>
+
+  <!-- ═══════════════════
+       BORDE INFERIOR
+  ═══════════════════ -->
+  <path d="M140,984 Q250,992 400,986 Q500,982 600,990 Q750,998 860,984"
+        stroke="#6aaa44" stroke-width="1.8" fill="none" opacity="0.60"/>
+  <use href="#FS" transform="translate(165,987)  rotate(-8)"/>
+  <use href="#HJ" transform="translate(188,985)  rotate(18)"/>
+  <use href="#CP" transform="translate(218,988)  rotate(-6)"/>
+  <use href="#HJ" transform="translate(248,987)  rotate(-14)"/>
+  <use href="#FM" transform="translate(278,987)  rotate(5)"/>
+  <use href="#HJ" transform="translate(308,989)  rotate(20)"/>
+  <use href="#FS" transform="translate(338,990)  rotate(-25)"/>
+  <use href="#HJ" transform="translate(368,988)  rotate(-10)"/>
+  <use href="#FM" transform="translate(398,987)  rotate(10)"/>
+  <use href="#HJ" transform="translate(428,989)  rotate(15)"/>
+  <use href="#FS" transform="translate(458,990)  rotate(-5)"/>
+  <use href="#HJ" transform="translate(488,988)  rotate(-20)"/>
+  <use href="#FM" transform="translate(518,987)  rotate(8)"/>
+  <use href="#HJ" transform="translate(548,989)  rotate(22)"/>
+  <use href="#FS" transform="translate(578,988)  rotate(-12)"/>
+  <use href="#HJ" transform="translate(608,987)  rotate(-8)"/>
+  <use href="#FM" transform="translate(638,989)  rotate(6)"/>
+  <use href="#HJ" transform="translate(668,987)  rotate(-18)"/>
+  <use href="#FS" transform="translate(698,986)  rotate(10)"/>
+  <use href="#HJ" transform="translate(728,988)  rotate(16)"/>
+  <use href="#CP" transform="translate(758,987)  rotate(-8)"/>
+  <use href="#HJ" transform="translate(788,985)  rotate(-12)"/>
+  <use href="#FS" transform="translate(818,986)  rotate(5)"/>
+  <use href="#HJ" transform="translate(845,985)  rotate(-20)"/>
+
+  <!-- ═══════════════════
+       BORDE IZQUIERDO
+  ═══════════════════ -->
+  <path d="M16,140 Q8,280 14,420 Q18,500 10,620 Q2,740 16,860"
+        stroke="#6aaa44" stroke-width="1.8" fill="none" opacity="0.60"/>
+  <use href="#FS" transform="translate(13,170)  rotate(85)"/>
+  <use href="#HJ" transform="translate(15,198)  rotate(90)"/>
+  <use href="#CP" transform="translate(12,228)  rotate(82)"/>
+  <use href="#HJ" transform="translate(14,258)  rotate(96)"/>
+  <use href="#FM" transform="translate(13,290)  rotate(88)"/>
+  <use href="#HJ" transform="translate(11,320)  rotate(78)"/>
+  <use href="#FS" transform="translate(10,352)  rotate(84)"/>
+  <use href="#HJ" transform="translate(12,382)  rotate(92)"/>
+  <use href="#FM" transform="translate(13,414)  rotate(80)"/>
+  <use href="#HJ" transform="translate(11,444)  rotate(86)"/>
+  <use href="#FS" transform="translate(10,476)  rotate(88)"/>
+  <use href="#HJ" transform="translate(12,506)  rotate(82)"/>
+  <use href="#FM" transform="translate(13,538)  rotate(90)"/>
+  <use href="#HJ" transform="translate(11,568)  rotate(78)"/>
+  <use href="#FS" transform="translate(10,600)  rotate(85)"/>
+  <use href="#HJ" transform="translate(12,630)  rotate(94)"/>
+  <use href="#CP" transform="translate(13,660)  rotate(80)"/>
+  <use href="#HJ" transform="translate(11,692)  rotate(88)"/>
+  <use href="#FM" transform="translate(10,724)  rotate(82)"/>
+  <use href="#HJ" transform="translate(12,754)  rotate(90)"/>
+  <use href="#FS" transform="translate(13,784)  rotate(86)"/>
+  <use href="#HJ" transform="translate(14,815)  rotate(78)"/>
+  <use href="#FS" transform="translate(13,845)  rotate(84)"/>
+
+  <!-- ═══════════════════
+       BORDE DERECHO
+  ═══════════════════ -->
+  <path d="M984,140 Q992,280 986,420 Q982,500 990,620 Q998,740 984,860"
+        stroke="#6aaa44" stroke-width="1.8" fill="none" opacity="0.60"/>
+  <use href="#FS" transform="translate(987,170)  rotate(-85)"/>
+  <use href="#HJ" transform="translate(985,198)  rotate(-90)"/>
+  <use href="#CP" transform="translate(988,228)  rotate(-82)"/>
+  <use href="#HJ" transform="translate(986,258)  rotate(-96)"/>
+  <use href="#FM" transform="translate(987,290)  rotate(-88)"/>
+  <use href="#HJ" transform="translate(989,320)  rotate(-78)"/>
+  <use href="#FS" transform="translate(990,352)  rotate(-84)"/>
+  <use href="#HJ" transform="translate(988,382)  rotate(-92)"/>
+  <use href="#FM" transform="translate(987,414)  rotate(-80)"/>
+  <use href="#HJ" transform="translate(989,444)  rotate(-86)"/>
+  <use href="#FS" transform="translate(990,476)  rotate(-88)"/>
+  <use href="#HJ" transform="translate(988,506)  rotate(-82)"/>
+  <use href="#FM" transform="translate(987,538)  rotate(-90)"/>
+  <use href="#HJ" transform="translate(989,568)  rotate(-78)"/>
+  <use href="#FS" transform="translate(990,600)  rotate(-85)"/>
+  <use href="#HJ" transform="translate(988,630)  rotate(-94)"/>
+  <use href="#CP" transform="translate(987,660)  rotate(-80)"/>
+  <use href="#HJ" transform="translate(989,692)  rotate(-88)"/>
+  <use href="#FM" transform="translate(990,724)  rotate(-82)"/>
+  <use href="#HJ" transform="translate(988,754)  rotate(-90)"/>
+  <use href="#FS" transform="translate(987,784)  rotate(-86)"/>
+  <use href="#HJ" transform="translate(986,815)  rotate(-78)"/>
+  <use href="#FS" transform="translate(987,845)  rotate(-84)"/>
+
+  <!-- Marco dorado interior (dos líneas) -->
+  <rect x="14" y="14" width="972" height="972" rx="8" ry="8"
+        fill="none" stroke="#c9a84c" stroke-width="1.8" opacity="0.55"/>
+  <rect x="22" y="22" width="956" height="956" rx="5" ry="5"
+        fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.30"/>
+</svg>
+
+
     <div class="fade-mask-top"></div>
     <div class="fade-mask-bottom"></div>
     <header>
@@ -20,16 +329,20 @@
 
     <div class="container">
         
-        <h3>¡Mi Gran Noche!</h3>
-        <p style="font-size: 1.1rem; line-height: 1.6;">Hay momentos en la vida que son inolvidables, y compartirlos con quienes más queremos los hace aún más especiales. ¡Acompáñame en esta noche mágica!</p>
-
-        <div class="countdown-container" id="countdown">
-            <div class="time-box"><span id="days">00</span><small>Días</small></div>
-            <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
-            <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
-            <div class="time-box"><span id="seconds">00</span><small>Seg</small></div>
+        <div class="parents-section">
+            <div class="parents-ornament">✦</div>
+            <p class="parents-label">Con la bendición de Dios y el amor de sus padres</p>
+            <div class="parents-divider"></div>
+            <div class="parents-names">
+                <span class="parent-name">Edwin Morales</span>
+                <div class="parents-heart">&#9825;</div>
+                <span class="parent-name">Geyni Flores</span>
+            </div>
+            <p class="parents-invite">tenemos el honor de invitarle a celebrar los 15 años</p>
+            <div class="parents-ornament">✦</div>
         </div>
 
+        
         <div class="calendar-card">
             <h3>Reserva la Fecha</h3>
 
@@ -89,6 +402,14 @@
             </div>
         </div>
 
+        <p>Faltan:</p>
+        <div class="countdown-container" id="countdown">
+            <div class="time-box"><span id="days">00</span><small>Días</small></div>
+            <div class="time-box"><span id="hours">00</span><small>Horas</small></div>
+            <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
+            <div class="time-box"><span id="seconds">00</span><small>Seg</small></div>
+        </div>
+
         <div class="card">
             <h2>La Celebración</h2>
             <p><strong>Fecha:</strong> Sábado, 27 de junio de 2026</p>
@@ -104,13 +425,6 @@
             <p><i>Tu mejor gala para compartir una noche inolvidable.</i></p>
         </div>
 
-        <div class="card">
-            <h2>Mesa de Regalos</h2>
-            <p>El mejor regalo es contar con tu presencia. Si deseas tener un detalle conmigo, dispondremos de un cofre para sobres en la recepción o puedes realizar una transferencia bancaria:</p>
-            <p style="margin-top: 20px;"><strong>Banco:</strong> Banco Central</p>
-            <p><strong>Cuenta / CBU:</strong> 0000000000000000000000</p>
-            <p><strong>A nombre de:</strong> Camila Pérez</p>
-        </div>
 
     </div>
 
