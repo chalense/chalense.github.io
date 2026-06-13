@@ -140,7 +140,7 @@
                 ),
                 url('img/image1.png') center/cover no-repeat;
 
-            filter: blur(5px) brightness(0.75);
+            filter: blur(1px) brightness(0.85);
             transform: scale(1.08); /* evita bordes vacíos al difuminar */
             z-index: 0;
         }
@@ -521,4 +521,24 @@ body::before {
     z-index: 9999;
     width: 100%;
     height: 100%;
+}
+
+#musicBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10000;
+    background: #b8882a;
+    color: #fff8ec;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(184,136,42,0.35);
+    transition: 0.3s;
+}
+#musicBtn:hover {
+    background: #9a7020;
 }

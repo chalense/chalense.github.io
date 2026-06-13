@@ -9,7 +9,11 @@
     
 </head>
 <body>
+   <audio id="bgMusic" loop>
+        <source src="audio/fondo.mp3" type="audio/mpeg">
+    </audio>
 
+<button id="musicBtn" onclick="toggleMusic()">▶ Reproducir música</button>
 <!-- ══════════════════════════════
      MARCO FLORAL SVG (overlay fijo)
      Flores y hojas dibujadas con SVG puro.
@@ -456,6 +460,18 @@
                 document.getElementById("countdown").innerHTML = "<h2 style='color:#dfba6b;'>¡Llegó el gran momento!</h2>";
             }
         }, 1000);
+
+        function toggleMusic() {
+            const audio = document.getElementById('bgMusic');
+            const btn = document.getElementById('musicBtn');
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = '⏸ Pausar música';
+            } else {
+                audio.pause();
+                btn.textContent = '▶ Reproducir música';
+            }
+        }
     </script>
 </body>
 </html>
