@@ -140,7 +140,7 @@
                 ),
                 url('img/image1.png') center/cover no-repeat;
 
-            filter: blur(5px) brightness(0.75);
+            filter: blur(1px) brightness(0.85);
             transform: scale(1.08); /* evita bordes vacíos al difuminar */
             z-index: 0;
         }
